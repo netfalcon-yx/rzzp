@@ -1,0 +1,20 @@
+body{margin:0;OVERFLOW-X: hidden; OVERFLOW: hidden;font-size:12px;background:expression(window.status="");}
+/*
+.maintop{height:85px;line-height:85px;background:url(images/topbk.gif) repeat-x;margin-bottom:5px;}
+.maintop #logo{width:232px;height:85px;float:left;}
+.maintop #logotxt{width:668px;height:85px;float:left;background:url(images/top-txt22.png) no-repeat}
+*/
+.maintop{height:85px;line-height:85px;background:url(imgs/index_titbk2.jpg) top right no-repeat;margin-bottom:5px;}
+.maintop #logotxt{width:840px;height:84px;float:left;background:url(imgs/tit_txt.gif) no-repeat}
+.maintop #right{width:250px;float:right;height:85px;padding-right:10px;text-align:right;font-size:12px;color:#FFF;overflow:hidden}
+
+.clear{clear: both;height:0px;display:block;}
+.mainleft{width:200px;left:left;overflow:hidden}
+.left2_2{ width:200px; height: auto; background-color:#F3FAFF;margin:5px auto}
+.left2_2 ul{ list-style:none; padding:0px; margin:0px;}
+.left2_2 li{font-size:14px}
+.left2_2 li span{font-weight:bold; background:url(images/nv2.jpg) no-repeat center; display:block; width:200px; height:31px; text-align:center; line-height:34px; color:#FFFFFF;}
+.left2_2 a, .left2_2 a:visited{ color:#444444; text-decoration:none; width:200px; display:block; line-height:28px; text-indent:50px; margin:4px 0;}
+.left2_2 a:hover,.curmenu{background:url(images/nv11.jpg) no-repeat center; color:#099!important;font-weight:bold}
+.main_iframe {Z-INDEX: 1; VISIBILITY: inherit; WIDTH: 100%; HEIGHT: 95%;margin-bottom:0;background-color:#FFFFFF;}
+

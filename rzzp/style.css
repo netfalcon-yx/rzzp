@@ -1,0 +1,43 @@
+body{ padding:0;margin:0;font:normal 12px/180% "ËÎÌå"; color:#000;background:expression(window.status="");}
+h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+div{ margin:0 auto;text-align:left;font:normal 12px/180% "ËÎÌå";}
+a:link,a:visited{color:#000; text-decoration:none;text-decoration:underline}
+a:hover{color:#CC3300;}
+img{border:none}
+ol,ul,li{list-style:none;}
+/*
+.maintop{height:85px;line-height:85px;background:url(images/topbk.gif) repeat-x;margin-bottom:5px;}
+.maintop #logo{width:232px;height:85px;float:left;}
+.maintop #logotxt{width:668px;height:85px;float:left;background:url(images/top-txt22.png) no-repeat}
+.maintop #right{width:200px;float:right;height:85px;background:url(images/topright.gif) top right no-repeat;padding-right:20px;text-align:center}
+*/
+.maintop{height:85px;line-height:85px;background:url(imgs/index_titbk2.jpg) top right no-repeat;margin-bottom:5px;}
+.maintop #logotxt{width:840px;height:84px;float:left;background:url(imgs/tit_txt.gif) no-repeat}
+
+input {BORDER: #888888 1px solid;FONT-SIZE: 12px; COLOR: #000000; BACKGROUND-COLOR: #ffffff;font-family: "Verdana";height:20px;line-height:20px;}
+
+.but1{width:67px; height:23px; background:url(images/bg_x.jpg);background-position:-4px -4px; border:0; color:#464646; line-height:23px}
+.but2{width:67px; height:23px; background:url(images/bg_x.jpg);background-position:-4px -30px; border:0; color:#464646; line-height:23px}
+.but3{width:100px; height:23px; background:url(images/but.gif) no-repeat;border:0; color:#333333; line-height:23px}
+.radio{border:none;height:15px;}
+.inselect{BORDER: #CCCCCC 1px solid;}
+
+.unav{height:30px;line-height:30px;font-size:14px;background:#EEF3F2;padding-left:5px;border-bottom:1px solid #E3E197}
+.umain{width:750px;margin:5px auto;border:1px solid #008780;padding:10px;}
+h3{font-size:24px;text-align:center}
+h4{font-size:18px;text-align:center}
+
+.redfont{color:#FF0000}
+.bluefont{color:#0066FF}
+
+.mytable{line-height:25px;width:98%;margin:5px auto;border-top:#D3D3D3 1px solid;border-left:#D3D3D3 1px solid;BORDER-COLLAPSE: collapse;}
+.mytable th{height:25px;font-size:14px;color:#000000;border-bottom:#D3D3D3 1px solid;border-right:#D3D3D3 1px solid; background:#009F93;color:#FFFFFF}
+.mytable td{height:22px;font-size:14px;border-bottom:#D3D3D3 1px solid;border-right:#D3D3D3 1px solid;padding-left:5px;}
+
+.newstit{font-size:20px;height:50px;line-height:50px;text-align:center;border-bottom:1px dotted #DDDDDD;margin-bottom:5px;font-family:ºÚÌå;}
+.newspub{font-size:14px;text-align:center;border-bottom:1px dotted #DDDDDD;line-height:24px;}
+.newscontent{margin:5px 10px;line-height:25px;font-size:14px;}
+
+.uphoto{width:160px;height:200px;margin:5px auto}
+.uphoto2{width:120px;height:150px;}
+.hdtxt{display:none}

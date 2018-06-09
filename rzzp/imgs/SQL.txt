@@ -1,0 +1,6 @@
+alter table tb_news add COLUMN ishow bit DEFAULT true
+
+alter table tb_bm add COLUMN jxdj Char
+alter table tb_bm add COLUMN yxnx bit DEFAULT False
+
+-----------------------------

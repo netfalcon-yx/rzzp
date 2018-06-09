@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网站框架</title>
+<style>
+*{font-size:12px;}
+body{margin:0;OVERFLOW-X: hidden; OVERFLOW: hidden;}
+.maintop{height:85px;line-height:85px;background:url(images/topbk.gif) repeat-x;margin-bottom:5px;}
+.maintop #logo{width:174px;height:85px;float:left;}
+.maintop #logotxt{width:500px;float:left;margin-top:10px;}
+.maintop #right{width:200px;float:right;height:85px;background:url(images/topright.gif) top right no-repeat;padding-right:20px;text-align:center}
+
+.mainleft{width:200px;left:left;overflow:hidden}
+.left2_2{ width:200px; height: auto; background-color:#fffaef;margin:5px auto}
+.left2_2 ul{ list-style:none; padding:0px; margin:0px;}
+.left2_2 li span{ font-size:13px; font-weight:bold; background:url(images/nv.jpg) no-repeat center; display:block; width:200px; height:31px; text-align:center; line-height:34px; color:#FFFFFF;}
+.left2_2 a, .left2_2 a:visited{ color:#fa9a54; text-decoration:none; width:200px; display:block; line-height:28px; text-indent:50px; margin:4px 0;}
+.left2_2 a:hover{ background:url(images/nv1.jpg) no-repeat center; color:#ff4200;}
+.main_iframe {Z-INDEX: 1; VISIBILITY: inherit; WIDTH: 100%; HEIGHT: 98%;margin-bottom:0;background-color:#FFFFFF}
+</style>
+<script language="javascript" src="unitpngfix.js"></script>
+</head>
+
+<body>
+<div class="maintop" id="maintop">
+	<div id="logo"><img src="images/top-logo.gif" /></div>
+	<div id="logotxt"><img src="images/top-txt.png" /></div>
+	<div id="right">欢迎管理员</div>
+</div>
+<script language="javascript">if(!+[1,])pngfix();</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="89%">
+  <tr>
+    <td width="200" valign="top" bgcolor="#fffaef" style="border:#ffc287 1px solid;border-bottom:none;">
+	<div class="left2_2">
+	     <ul>
+		   <li><span>用户菜单导航</span></li>
+		   <li><a href="#">盘面信息</a></li>
+		   <li><a href="#">研究报告</a></li>
+		   <li><a href="#">金证VIP报告</a></li>
+		   <li><a href="#">新股地带</a></li>
+		 </ul>
+    </div></td>
+    <td width="1" valign="top">&nbsp;</td>
+    <td  valign="top" style="border:#ffc287 1px solid;">
+	<IFRAME class=main_iframe id=frmright name=frmright src="temp.htm" frameBorder=0 scrolling=yes></IFRAME>	</td>
+  </tr>
+</table>
+</body>
+</html>

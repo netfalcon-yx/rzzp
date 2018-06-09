@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=5; IE=10"> 
+<title>考试签到</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+<style>
+.mytable td{font-size:18px;font-weight:bold;line-height:32px;}
+</style>
+</head>
+
+<body>
+<div class="maintop" id="maintop">
+	<div id="logotxt"></div>
+</div>
+<object classid="clsid:5EB842AE-5C49-4FD8-8CE9-77D4AF9FD4FF" id="IdrControl1" width="0" height="0" codebase="idr.cab"></object>
+  <table width="800" border="0" cellpadding="0" cellspacing="0" class="mytable" style="width:800px;">
+    <tr>
+      <th colspan="2" class="newstit" style="font-size:24px">考生笔试签到</th>
+    </tr>
+    <tr>
+      <td align="right">身份证号：</td>
+      <td><input name="sfz" type="text" id="sfz" style="height:30px;line-height:30px;font-size:24px;font-weight:bold" size="25" maxlength="18" />
+          <input name="button" type="button" class="but2" id="button" value="确定" onclick="window.clearInterval(t);getksinfo($('#sfz').val())" />
+          <input name="button2" type="button" class="but1" id="button2" value="重置" onclick="wclear()" /></td>
+    </tr>
+    <tr>
+      <td width="20%" align="right">姓名：</td>
+      <td><span id="xm"></span></td>
+    </tr>
+    <tr>
+      <td align="right">准考证号：</td>
+      <td><span id="zkz"></span></td>
+    </tr>
+    <tr>
+      <td align="right">签到状态：</td>
+      <td><span id="usta"></span></td>
+    </tr>
+    <tr>
+      <td align="right">&nbsp;</td>
+      <td>【<a href="ksqd_tj.asp" target="_blank">签到统计</a>】 <span id="winfo">准备读取身份证...</span></td>
+    </tr>
+  </table>
+<script language=javascript>
+function Idcard(){
+	var result;
+	var cardid;
+	result=IdrControl1.ReadCard("1001","d:\\test\\test.jpg");
+	if (result==1){
+		$("#xm").html(IdrControl1.GetName());
+		cardid=IdrControl1.GetCode();
+		$("#sfz").val(cardid);
+		window.clearInterval(t);
+		getksinfo(cardid);
+	}else{
+		if (result==-1)
+			$("#winfo").innerText="端口初始化失败！";
+		if (result==-2)
+			$("#winfo").innerText="请重新将卡片放到读卡器上！";
+		if (result==-3)
+			$("#winfo").innerText="读取数据失败！";
+	}
+}
+function getksinfo(cid)
+{
+$.ajax({
+	url:"getksinfo.asp?cid="+cid+"&t="+Math.random(),
+	type:"get", 
+	dataType:"json",
+	success: function (jsdata){
+	if(jsdata=="" || jsdata==null)
+	{
+		wclear();
+		alert("无该考生数据...");
+	}
+	else
+	{
+		$("#xm").html(jsdata["xm"]);	
+		$("#zkz").html(jsdata["zkz"]);			
+		$("#winfo").html("读取成功！");
+		if(jsdata["sta"]==1)
+			$("#usta").html("签到成功！");
+		else
+			$("#usta").html("签到失败！");
+		
+	}
+	t=setInterval("Idcard()",1000);
+	},
+	error:function(){$("#winfo").html("读取考生信息出错...");t=setInterval(" Idcard()",1000);}
+	})
+}
+function wclear()
+{
+$("#sfz").val("");
+$("#xm").html("");	
+$("#zkz").html("");
+$("#winfo").html("准备读取身份证...");
+}
+var t=setInterval(" Idcard()",1000);
+</script></body>
+</html>
